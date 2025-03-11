@@ -1,13 +1,73 @@
+:root {
+    --darkgreen: rgb(0, 71, 0);
+    --lightblue: rgb(196, 238, 255);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-
 
 h1 {
     font-size: 2rem;
     text-align: center;
-    /* why is it not centered? */
+    background-color: var(--darkgreen);
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    background-color: var(--lightblue);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+
+nav a {
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: var(--darkgreen);
+}
+
+nav a:hover {
+    background-color: var(--darkgreen);
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.card {
+    margin: 1rem;
+    /* padding: 1rem; */
+    
+}
+
+.card h2 {
+    background-color: var(--darkgreen);
+    color: white;
+    padding: .5rem;
+    
+}
+
+.card p {
+    padding: 1rem;
+}
+
+#about-me {
+    grid-column: 1/2;
+}
+
+#resources {
+    grid-column: 2/3;
 }
