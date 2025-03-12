@@ -45,28 +45,40 @@ nav a:hover {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .card {
     margin: 1rem;
-    /* padding: 1rem; */
-    
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .card h2 {
     background-color: var(--darkgreen);
     color: white;
     padding: .5rem;
-    
+    text-align: center;
 }
 
-.card p {
+.card div {
     padding: 1rem;
 }
 
 #about-me {
     grid-column: 1/2;
 }
+
+#profile-pic {
+    float: right;
+}
+
+/* #about-me div {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+} */
 
 #resources {
     grid-column: 2/3;
