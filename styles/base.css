@@ -45,7 +45,6 @@ nav a:hover {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
 }
 
 .card {
@@ -71,15 +70,46 @@ main {
     grid-column: 1/2;
 }
 
-#profile-pic {
-    float: right;
-}
-
-/* #about-me div {
+#about-me-text{
     display: grid;
     grid-template-columns: 3fr 1fr;
-} */
+    grid-template-rows: 1fr;
+}
+
+#about-me-text h3{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 1rem;
+}
+
+#flag {
+    float: left; 
+    margin-right: 1rem;
+}
+
+#san-jose-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#profile-pic {
+    grid-column: 2/3;
+}
 
 #resources {
     grid-column: 2/3;
+}
+
+#resources div {
+    padding: 1rem;
+}
+
+#resources div ul {
+    margin: 1rem;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--darkgreen);
+    color: white;
 }
