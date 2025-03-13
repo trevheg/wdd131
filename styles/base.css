@@ -112,4 +112,5 @@ footer {
     text-align: center;
     background-color: var(--darkgreen);
     color: white;
+    padding: 1rem;
 }
