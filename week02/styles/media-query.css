@@ -1,0 +1,31 @@
+:root {
+    --background: rgb(218, 248, 248);
+    --background2:  rgb(190, 190, 255);
+    --border: gray;
+}
+
+body {
+    font-family: Roboto;
+}
+
+header, main, footer {
+    max-width: 640;
+    margin: 1rem auto;
+    border: solid 1px var(--border);
+    border-radius: 1rem;
+    background-color: var(--background2);
+    padding: .5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    
+}
+
+section {
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: .5rem;
+}
