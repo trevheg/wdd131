@@ -1,0 +1,27 @@
+@media screen and (min-width: 500px) {
+
+    #temple-pics {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+    
+    nav a {
+        text-align: right;
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+        color: white;
+    }
+}

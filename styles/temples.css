@@ -1,7 +1,71 @@
+:root {
+    --darkgreen: rgb(0, 71, 0);
+    --lightblue: rgb(196, 238, 255);
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main { 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkgreen);
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    text-align: right;
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: var(--lightblue);
+    color: var(--darkgreen);
+    
+}
+
+#temple-pics {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+figure {
+    place-items: center;
+}
 
 img {
-    width: 200px;
+    max-width: 200px;
 }
 
 
