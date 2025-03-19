@@ -1,8 +1,21 @@
 @media screen and (min-width: 500px) {
 
-    #temple-pics {
+    header {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        text-align: left;
+    }
+
+    main { 
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #temple-pics {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
     }
 
     nav {
@@ -10,11 +23,10 @@
         align-items: center;
     }
     
-    
-    
     nav ul {
         list-style-type: none;
         display: flex;
+        flex-direction: row;
     }
     
     nav a {
@@ -23,5 +35,10 @@
         display: block;
         text-decoration: none;
         color: white;
+    }
+
+    img {
+        /* max-width: 250px; */
+        width: 100%;
     }
 }
