@@ -18,6 +18,14 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
     }
 
+    #menu {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+    }
+
     nav {
         display: flex;
         align-items: center;
