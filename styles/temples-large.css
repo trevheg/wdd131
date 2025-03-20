@@ -5,7 +5,7 @@
         justify-content: space-between;
     }
 
-    header h1 {
+    h1 {
         text-align: left;
     }
 
@@ -46,7 +46,6 @@
     }
 
     img {
-        /* max-width: 250px; */
         width: 100%;
     }
 }
