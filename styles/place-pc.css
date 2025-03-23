@@ -1,0 +1,36 @@
+@media screen and (min-width: 500px) {
+    #hero-space {
+        position: relative;
+    }
+
+    .info {
+        background-color: var(--sakura);
+        border: solid var(--akabeni) 1px;
+
+    }
+
+    #data {
+        position: absolute;
+        left: 1rem;
+        top: 3rem;
+    }
+
+    #weather {
+        position: absolute;
+        right: 1rem;
+        bottom: 2rem;
+    }
+
+    #weather h2 {
+        text-decoration: underline;
+    }
+
+    #weather h2::after {
+        content: dasdf; 
+        /* why isn't this working? Need to put that weather emoticon there*/
+    }
+
+    #weather-icon {
+        display: none;
+    }
+}

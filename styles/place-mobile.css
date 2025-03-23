@@ -1,0 +1,58 @@
+:root {
+    --sakura: #FCC9B9;
+    --akabeni: #C3272B;
+    --aotake: #006442;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    background-color: var(--akabeni);
+    padding: 1rem;
+    text-align: center;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    background-color: var(--aotake);
+    color: white;
+    padding: .5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.info {
+    justify-items: center;
+}
+
+table {
+    margin: 1rem;
+}
+
+tr td:first-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+#weather-icon {
+    width: 30px;
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: var(--akabeni);
+    color: white;
+    text-align: center;
+    padding: .5rem;
+}
