@@ -11,6 +11,10 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h1, h2 {
+    font-family: "Reggae One", system-ui;
+}
+
 h1 {
     color: white;
     background-color: var(--akabeni);
