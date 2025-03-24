@@ -1,6 +1,11 @@
 @media screen and (min-width: 500px) {
+
+    body {
+        max-width: 1500px;
+    }
     #hero-space {
         position: relative;
+        max-width: 1500px;
     }
 
     .info {
@@ -21,16 +26,13 @@
         bottom: 2rem;
     }
 
-    #weather h2 {
-        text-decoration: underline;
-    }
-
     #weather h2::after {
-        content: dasdf; 
-        /* why isn't this working? Need to put that weather emoticon there*/
+        content: "   ⛅"; 
     }
 
     #weather-icon {
         display: none;
     }
+
+
 }
