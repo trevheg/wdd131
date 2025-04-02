@@ -1,0 +1,51 @@
+@media screen and (min-width: 500px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    main { 
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #temple-pics {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    nav a {
+        text-align: right;
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+        color: white;
+    }
+
+    img {
+        width: 100%;
+    }
+}

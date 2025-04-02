@@ -1,37 +1,14 @@
-let firstName = 'Antonia';
-let lastName = 'Francesca';
-const fullNameP = document.querySelector('#fullName');
+let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];
 
-// Function Declaration: 
-// function fullName(first, last) {
-//     return `${first} ${last}`;
-// }
+const namesB = names.filter(name => name[0] == "B");
 
-// Function expression:
-// let fullName = function (first, last) {
-//     return `${first} ${last}`;
-// }
+console.log(namesB);
 
-// Arrow Function
-// const fullName = (first, last) => `${first} ${last}`;
-const fullName = (firstName, lastName) => `${firstName} ${lastName}`;
+const namesLength = names.map(name => name.length);
 
-// fullNameP.innerHTML = fullName(firstName, lastName);
-fullNameP.innerHTML = fullName(firstName, lastName);
+console.log(namesLength);
 
-console.log(fullName(firstName, lastName));
+console.log(names.filter(name => name[0] == "B"));
+console.log(names.map(name => name.length));
 
-let scores = [100, 72, 83, 94, 88, 87];
-let accumulator = 0;
-let count = 0;
-scores.forEach(score => {
-  if (score > 87) {
-    accumulator += score;
-    count ++;
-  }
-});
-if ( count > 0 ) {
-  console.log(accumulator/count); 
-} else {
-  console.log("No scores reported.");
-}
+console.log(names.reduce((total, name) => total + name.length, 0) / names.length)

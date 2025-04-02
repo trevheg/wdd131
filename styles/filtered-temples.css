@@ -1,0 +1,111 @@
+:root {
+    --darkgreen: rgb(0, 71, 0);
+    --lightblue: rgb(196, 238, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    background-color: var(--darkgreen);
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#menu {
+    background-color: var(--darkgreen);
+    color: var(--lightblue);
+    border:0;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+
+    font-size: 2.5rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+nav {
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav a {
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+nav a:hover {
+    background-color: var(--lightblue);
+    color: var(--darkgreen);
+}
+
+.navigation a {
+    display: none;
+}
+
+.navigation.open a {
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--lightblue);
+}
+
+#temple-pics {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+
+figure {
+    place-items: center;
+    margin: .5rem;
+    /* border: solid, var(--lightblue); */
+}
+
+img {
+    max-width: 100%;
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: var(--darkgreen);
+    color: white;
+    padding: 1rem;
+} 
