@@ -89,4 +89,24 @@ const temples = [
     },
   ];
 
-  
+// Loop through the array and create "temple cards" for each temple
+const makeTempleCards = (templeList => {
+    templeList.forEach(temple => {
+        // create the elements
+        const templeHTML = document.createElement("div");
+        const name = document.createElement("h3");
+        const location = document.createElement("p");
+        const dedication = document.createElement("p");
+        const area = document.createElement("p");
+        const image = document.createElement("img");
+        // image attributes
+        image.setAttribute("src", temple.imageUrl);
+        image.setAttribute("alt", `${temple.templeName} Temple`);
+        // code the elements
+        name.innerHTML = temple.templeName;
+        location.innerHTML = `Location: ${temple.location}`;
+        dedication.innerHTML = `Dedicated: ${temple.dedicated}`;
+        area.innerHTML = `Size: ${temple.area} sq ft`;
+        // add the elements to the div
+    });
+})  
