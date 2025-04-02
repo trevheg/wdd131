@@ -87,6 +87,15 @@ h2 {
     grid-template-columns: 1fr;
 }
 
+.temple {
+    text-align: center;
+    margin: .5rem;
+}
+
+.temple p {
+    font-size: 12px;
+}
+
 figure {
     place-items: center;
     margin: .5rem;
@@ -96,6 +105,8 @@ figure {
 img {
     max-width: 100%;
 }
+
+
 
 figcaption {
     text-align: center;

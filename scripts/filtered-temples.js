@@ -1,10 +1,11 @@
 const menuButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
-
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-    menuButton.classList.toggle("open");
-})
+const templePics = document.querySelector("#temple-pics");
+const homeButton = document.querySelector("#home");
+const oldButton = document.querySelector("#old");
+const newButton = document.querySelector("#new");
+const largeButton = document.querySelector("#large");
+const smallButton = document.querySelector("#small");
 
 const temples = [
     {
@@ -89,24 +90,56 @@ const temples = [
     },
   ];
 
+// Event listeners
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+    menuButton.classList.toggle("open");
+})
+homeButton.addEventListener("click", () => makeTempleCards(temples));
+oldButton.addEventListener("click", () => {
+  makeTempleCards(temples.filter(temple => Number(temple.dedicated.slice(0,4)) < 1900));
+})
+newButton.addEventListener("click", () => {
+  makeTempleCards(temples.filter(temple => Number(temple.dedicated.slice(0,4)) > 2000))
+})
+
+
+
 // Loop through the array and create "temple cards" for each temple
 const makeTempleCards = (templeList => {
-    templeList.forEach(temple => {
-        // create the elements
-        const templeHTML = document.createElement("div");
-        const name = document.createElement("h3");
-        const location = document.createElement("p");
-        const dedication = document.createElement("p");
-        const area = document.createElement("p");
-        const image = document.createElement("img");
-        // image attributes
-        image.setAttribute("src", temple.imageUrl);
-        image.setAttribute("alt", `${temple.templeName} Temple`);
-        // code the elements
-        name.innerHTML = temple.templeName;
-        location.innerHTML = `Location: ${temple.location}`;
-        dedication.innerHTML = `Dedicated: ${temple.dedicated}`;
-        area.innerHTML = `Size: ${temple.area} sq ft`;
-        // add the elements to the div
-    });
+  // clear templePics
+  templePics.innerHTML = "";
+  // generate the temple picture
+  templeList.forEach(temple => {
+    // create the elements
+    const templeHTML = document.createElement("div");
+    const name = document.createElement("h3");
+    const location = document.createElement("p");
+    const dedication = document.createElement("p");
+    const area = document.createElement("p");
+    const image = document.createElement("img");
+    // image attributes
+    image.setAttribute("src", temple.imageUrl);
+    image.setAttribute("alt", `${temple.templeName} Temple`);
+    image.setAttribute("loading", "lazy");
+    // code the elements
+    name.innerHTML = temple.templeName;
+    location.innerHTML = `Location: ${temple.location}`;
+    dedication.innerHTML = `Dedicated: ${temple.dedicated}`;
+    area.innerHTML = `Size: ${temple.area} sq ft`;
+    // add the elements to the div
+    templeHTML.appendChild(name);
+    templeHTML.appendChild(location);
+    templeHTML.appendChild(dedication);
+    templeHTML.appendChild(area);
+    templeHTML.appendChild(image);
+    // add class to div
+    templeHTML.classList.add("temple")
+    // add div to document
+    templePics.appendChild(templeHTML);
+  });
 })  
+
+// call makeTempleCards at page load
+makeTempleCards(temples);
+
