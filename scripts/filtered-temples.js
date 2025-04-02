@@ -98,11 +98,16 @@ menuButton.addEventListener("click", () => {
 homeButton.addEventListener("click", () => makeTempleCards(temples));
 oldButton.addEventListener("click", () => {
   makeTempleCards(temples.filter(temple => Number(temple.dedicated.slice(0,4)) < 1900));
-})
+});
 newButton.addEventListener("click", () => {
-  makeTempleCards(temples.filter(temple => Number(temple.dedicated.slice(0,4)) > 2000))
-})
-
+  makeTempleCards(temples.filter(temple => Number(temple.dedicated.slice(0,4)) > 2000));
+});
+largeButton.addEventListener("click", () => {
+  makeTempleCards(temples.filter(temple => temple.area > 90000));
+});
+smallButton.addEventListener("click", () => {
+  makeTempleCards(temples.filter(temple => temple.area < 10000));
+});
 
 
 // Loop through the array and create "temple cards" for each temple
