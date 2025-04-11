@@ -1,14 +1,11 @@
-let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];
+function calculate(a, b, callback) {
+    callback(a + b);
+}
 
-const namesB = names.filter(name => name[0] == "B");
+function displayResult(result) {
+console.log('The result is: ' + result);
+}
 
-console.log(namesB);
+// Call a function named calculate and pass it the arguments to support the console output of the following equation: 2 + 3. You need to pass three arguments to the calculate function.kindlenook
 
-const namesLength = names.map(name => name.length);
-
-console.log(namesLength);
-
-console.log(names.filter(name => name[0] == "B"));
-console.log(names.map(name => name.length));
-
-console.log(names.reduce((total, name) => total + name.length, 0) / names.length)
+calculate(2, 3, displayResult)
