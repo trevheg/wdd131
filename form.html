@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <div>
+            <form action="review.html" method="get">
+                <label>Product Name 
+                    <select name="product" id="product" required>
+                        <option value="" disabled selected>Select a Product...&#9662;</option>
+                        <option value="zelda">Zelda</option>
+                        <option value="link">Link</option>
+                        <option value="ganondorf">Ganondorf</option>
+                        <option value="mario">Mario</option>
+                        <option value="luigi">Luigi</option>
+                        <option value="peach">Peach</option>
+                        <option value="bowser">Bowser</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+    </main>
+    <footer>        
+        <p>&#169; <span id="currentYear"></span> Trevor Hegstrom, USA</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

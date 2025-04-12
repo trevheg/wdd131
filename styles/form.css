@@ -1,0 +1,21 @@
+:root {
+    --primary: #354a54;
+    --secondary: #98afba;
+    --tertiary: #2b8caf;
+    --quaternary: #ffabf7;
+    --quintary: #6e416a;
+}
+
+* {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: var(--quaternary);
+    color: var(--tertiary);
+    padding: 1rem;
+    text-align: center;
+}
