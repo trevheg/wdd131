@@ -14,21 +14,19 @@
     <main>
         <div>
             <form action="review.html" method="get" id="theForm">
-                <label class="marginTop">Product Name 
-                    <select name="product" id="product" required>
-                        <option value="" disabled selected>Select a Product...&#9662;</option>
-                        <option value="zelda">Zelda</option>
-                        <option value="link">Link</option>
-                        <option value="ganondorf">Ganondorf</option>
-                        <option value="mario">Mario</option>
-                        <option value="luigi">Luigi</option>
-                        <option value="peach">Peach</option>
-                        <option value="bowser">Bowser</option>
-                    </select>
-                </label>
-                <label for="stars" class="marginTop">Overall Rating</label>
-                    
-                        
+                <label for="product" class="marginTop">Product Name</label> 
+                <select name="product" id="product" required>
+                    <option value="" disabled selected>Select a Product...&#9662;</option>
+                    <option value="zelda">Zelda</option>
+                    <option value="link">Link</option>
+                    <option value="ganondorf">Ganondorf</option>
+                    <option value="mario">Mario</option>
+                    <option value="luigi">Luigi</option>
+                    <option value="peach">Peach</option>
+                    <option value="bowser">Bowser</option>
+                </select>
+                
+                <label for="stars" class="marginTop">Overall Rating</label>       
                 <input type="radio" name="stars" value="5" required>
                 <input type="radio" name="stars" value="4">
                 <input type="radio" name="stars" value="3">
@@ -36,23 +34,27 @@
                 <input type="radio" name="stars" value="1">
                     
                 
-                <label  class="marginTop">Date of Installation
-                    <input type="date" id="installDate" name="date" required>
-                </label>
+                <label for="installDate" class="marginTop">Date of Installation</label>
+                <input type="date" id="installDate" name="installDate" required>
+                
                 <div class="marginTop" class="labels">
                     <p>Which features did you find useful?</p>
                     <p>Check all that apply:</p>
                 </div>
                 <div>
-                    <label><input type="checkbox" id="fun" name="fun" value="yes">Fun</label>
-                    <label><input type="checkbox" id="op" name="op" value="yes">OP</label>
-                    <label><input type="checkbox" id="noobFriendly" name="noobFriendly" value="yes">Noob Friendly</label>
-                    <label><input type="checkbox" id="leet" name="leet" value="yes">1337</label>
+                    <label for="fun">Fun</label>
+                    <input type="checkbox" id="fun" name="fun" value="yes">
+                    <label for="op">OP</label>
+                    <input type="checkbox" id="op" name="op" value="yes">
+                    <label for="noobFriendly">Noob Friendly</label>
+                    <input type="checkbox" id="noobFriendly" name="noobFriendly" value="yes">
+                    <label for="leet">1337</label>
+                    <input type="checkbox" id="leet" name="leet" value="yes">
                 </div>
                 <label class="marginTop">Written Review (optional)<textarea name="writtenReview" id="writtenReview" rows="3" cols="25"></textarea></label>
-                <label  class="marginTop">Your Name (Optional)
-                    <input type="text">
-                </label>
+                <label for="yourName" class="marginTop">Your Name (Optional)</label>
+                <input name="yourName" id="yourName" type="text">
+                
                 <input type="submit" value="Post Review">
 
             </form>
