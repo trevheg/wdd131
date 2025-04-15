@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A page for customers to review products">
-    <meta author="Trevor Hegstrom">
+    <meta name="author" content="Trevor Hegstrom">
     <title>Product Review</title>
     <script src="scripts/getdates.js" defer></script>
     <link rel="stylesheet" href="styles/form.css">
@@ -24,12 +24,32 @@
                     <option value="" disabled selected>Select a Product...&#9662;</option>
                 </select>
                 
-                <label for="stars" class="marginTop">Overall Rating</label>       
-                <input type="radio" name="stars" value="5" required>
-                <input type="radio" name="stars" value="4">
-                <input type="radio" name="stars" value="3">
-                <input type="radio" name="stars" value="2">
-                <input type="radio" name="stars" value="1">
+                <label class="marginTop">Overall Rating:</label>  
+                <div id="stars">
+                    <div class="stars">
+                        <label for="fivestar">5/5</label>
+                        <input type="radio" name="stars" id="fivestar" value="5">                    
+                    </div>
+                    <div class="stars">
+                        <label for="fourstar">4/5</label>
+                        <input type="radio" name="stars" id="fourstar" value="4">                    
+                    </div> 
+                    <div class="stars">
+                        <label for="threestar">3/5</label>
+                        <input type="radio" name="stars" id="threestar" value="3">                    
+                    </div> 
+                    <div class="stars">
+                        <label for="twostar">2/5</label>
+                        <input type="radio" name="stars" id="twostar" value="2">                    
+                    </div>                  
+                    <div class="stars">
+                        <label for="onestar">1/5</label>     
+                        <input type="radio" name="stars" id="onestar" value="1" required>
+                    </div>
+
+                </div>
+                
+
                     
                 
                 <label for="installDate" class="marginTop">Date of Installation</label>
@@ -43,22 +63,18 @@
                     <div>
                         <input type="checkbox" id="fun" name="fun" value="yes">
                         <label for="fun">Fun</label>
-
                     </div>
                     <div>
-                        <input type="checkbox" id="op" name="op" value="yes">
-                            
+                        <input type="checkbox" id="op" name="op" value="yes">                            
                         <label for="op">OP</label>
                     </div>
                     <div>
-                    <input type="checkbox" id="noobFriendly" name="noobFriendly" value="yes">
-                    <label for="noobFriendly">Noob Friendly</label>
-
+                        <input type="checkbox" id="noobFriendly" name="noobFriendly" value="yes">
+                        <label for="noobFriendly">Noob Friendly</label>
                     </div>
                     <div>
                         <input type="checkbox" id="leet" name="leet" value="yes">
                         <label for="leet">1337</label>
-
                     </div>
                 </div>
                 <label class="marginTop">Written Review (optional)<textarea name="writtenReview" id="writtenReview" rows="3" cols="25"></textarea></label>
