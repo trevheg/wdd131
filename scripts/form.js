@@ -1,6 +1,4 @@
-const select = document.querySelector("product");
-
-
+const select = document.querySelector("#product");
 
 const products = [
   {
@@ -31,7 +29,6 @@ const products = [
 ];
 
 products.forEach(product => {
-  // const dropDown = document.querySelector("product");
     let option = document.createElement("option");
     option.text = product.name;
     option.value = product.id;
