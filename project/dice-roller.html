@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The World of Myrad</title>
+    <meta name="description" content="A page about Myrad, the world of my D&D campaign">
+    <meta name="author" content="Trevor Hegstrom">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/nav-bar.js" defer></script>
+    <script src="scripts/dice-roller.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Dice Roller</h1>
+        <button id="menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="places.html" id="places">Places of Myrad</a></li>
+                <li><a href="dice-roller.html" id="dice-roller" class="thisPageLink">Dice Roller</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="diceRoller">
+            <h3>Directions:</h3>
+            <p>Select the dice you want to add to your dice roll. If you want to subtract any dice from your dice roll, select "Subtract." Add numbers to add or subtract from your roll in the "Modifier" field. Then select "Roll!" to roll.</p>
+            <h3>Choose your dice:</h3>
+            <form action="#" id="addSubtract">                    
+                <div class="addSubtract">                   
+                    <label for="addDice">Add</label>
+                    <input type="radio" id="addDice" name="addSubtract" value="Add" checked>
+                </div>
+                <div class="addSubtract">
+                    <label for="subtractDice" >Subtract</label>
+                    <input type="radio" id="subtractDice" name="addSubtract" value="Subtract">
+                </div>
+            </form>
+            <button class="dieButton" id="d4">D4</button>
+            <button class="dieButton" id="d6">D6</button>
+            <button class="dieButton" id="d8">D8</button>
+            <button class="dieButton" id="d10">D10</button>
+            <button class="dieButton" id="d12">D12</button>
+            <button class="dieButton" id="d20">D20</button>
+            <button class="dieButton" id="d100">D100</button>
+            <h4 id="chosenDice"></h4>
+            <form action="#">
+                <label for="modifier" id="modifierLabel">Modifier:</label>
+                <input type="text" inputmode="numeric" pattern="[0-9]+" id="modifier" min="0" max="0" placeholder="0">
+            </form>
+
+
+            <button id="roll">Roll!</button>
+            <h4 id="rolls"></h4>
+            <h4 id="result"></h4>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
